@@ -16,6 +16,8 @@ export default (schema, data, errors, options = {}) => {
     jsonRaw,
   });
 
+  console.log("Step 3: customErrors",customErrors)
+
   if (format === 'cli') {
     return customErrors.map(customErrorToText).join('\n\n');
   } else {

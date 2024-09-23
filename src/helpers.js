@@ -127,6 +127,8 @@ export function createErrorInstances(root, options) {
 
 export default (ajvErrors, options) => {
   const tree = makeTree(ajvErrors || []);
+  console.log("Step 1: Tree",tree)
   filterRedundantErrors(tree);
+  console.log("Step 1: filterRedundantErrors",tree)
   return createErrorInstances(tree, options);
 };
